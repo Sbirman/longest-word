@@ -13,7 +13,7 @@ class Game:
     def is_valid(self, word):
         if not word:
             return False
-        letters = self.grid.copy() # get a shallow copy to avoid changing word
+        letters = self.grid.copy() # get shallow copy to avoid changing word
         for letter in word:
             if letter in letters:
                 letters.remove(letter)
