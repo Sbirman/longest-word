@@ -30,7 +30,13 @@ class TestGame(unittest.TestCase):
         self.assertIs(new_game.is_valid('OQUWRBAZE'), False)
 
 # tests unknown word
-    def test_unknown_word_is_invalid(self):
-      new_game = Game()
-      new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
-      self.assertIs(new_game.is_valid('FEUN'), False)
+    def test_unknown_word_is_not_valid(self):
+        new_game = Game()
+        new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
+        self.assertIs(new_game.is_valid('FEUN'), False)
+
+    def test_is_valid_dico(self):
+        new_game = Game()
+        new_game.grid = list('KWIENFUQW') # Force the grid to a test case:
+        self.assertIs(new_game.is_valid('FEUN'), False)
+
